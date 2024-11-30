@@ -1,0 +1,926 @@
+@charset "UTF-8";
+/* Reseteo de márgenes y rellenos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Eliminamos las líneas de texto no deseadas */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-padding-top: 0rem;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 2rem 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 5rem;
+}
+
+/* Elimina los bordes de las imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Elimina subrayados de los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Elimina el estilo por defecto en los botones */
+button, input, select, textarea {
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Evita que los campos de formulario se resalten por defecto */
+input, textarea {
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+/* Restablece las listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Evitar espaciado en tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reseteo de todos los elementos en el formulario */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reset de los elementos form */
+input[type=checkbox], input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Reseteo de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+/* Establece la visibilidad de los elementos */
+button, input, select, textarea {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* No mostrar marcas de superposición en elementos de formulario */
+input, textarea {
+  outline: none;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/*Button */
+.button {
+  font-size: 1.5rem;
+  min-width: 18rem;
+  min-height: 5.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+}
+.button--primary {
+  background-color: rgb(132, 84, 252);
+  color: white;
+}
+.button--primary:hover {
+  background-color: #6022fb;
+}
+.button--secundary {
+  background-color: rgb(252, 252, 252);
+  color: white;
+}
+
+/*Card1*/
+.card1 {
+  display: block;
+  justify-content: center;
+  width: auto;
+}
+.card1__contain {
+  display: block;
+  background: white;
+  padding: 1rem;
+}
+.card1__picture {
+  min-height: 38rem;
+  min-width: 18rem;
+  background-image: url("https://delabodega.pe/wp-content/uploads/2020/06/Vino-Finca-Rotondo-Cabernet-Sauvignon-750-ml.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card1 button {
+  width: 100%;
+  padding: 3rem 0;
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: "Oswald", sans-serif;
+}
+.card1 button h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.card1--vertical {
+  writing-mode: vertical-rl; /* El texto fluye de derecha a izquierda */
+  font-size: 20px;
+  letter-spacing: 2px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .card1 {
+    display: flex;
+    gap: 2rem;
+  }
+  .card1__contain {
+    display: inline-block;
+  }
+  .card1__picture {
+    min-height: 28rem;
+  }
+  .card1--vertical {
+    display: block;
+    font-size: 1.5rem;
+    color: rgb(252, 252, 252);
+  }
+}
+
+/*Card2*/
+.card2 {
+  font-size: 1.8rem;
+  background: #fffefe;
+}
+.card2__picture {
+  min-height: 22rem;
+}
+.card2__picture--one {
+  background-image: url("https://delabodega.pe/wp-content/uploads/2021/05/Vino-Norton-Cosecha-tardia-dulce-750-ml-400x480.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card2__picture--two {
+  background-image: url("https://delabodega.pe/wp-content/uploads/2020/06/VINO-MONTESIERPE-BORGONA-TINTO-750-ML.-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card2__picture--three {
+  background-image: url("https://delabodega.pe/wp-content/uploads/2020/06/Vino-Vi%C3%B1a-Vieja-Gran-Rose-750-ml-400x480.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card2__picture--four {
+  background-image: url("https://delabodega.pe/wp-content/uploads/2020/06/Chenin-Blanc-Sauvignon-Blanc-Montesierpe-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card2__picture--five {
+  background-image: url("https://delabodega.pe/wp-content/uploads/2021/05/Vino-Norton-Coleccion-Malbec-750-ml-1000x1000.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card2__text {
+  padding: 1.2rem;
+}
+.card2__text h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+}
+.card2__add {
+  min-height: 3.2rem;
+  text-align: center;
+  line-height: 3rem;
+  border: 1px solid rgb(143, 142, 142);
+  position: relative;
+  font-size: 1.2rem;
+}
+.card2__add span {
+  position: absolute;
+  font-size: 4rem;
+  font-weight: 100;
+  width: 30px;
+  color: rgb(143, 142, 142);
+  right: 0;
+}
+.card2 .button--primary {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+@media (min-width: 480px) {
+  .card2 {
+    font-size: 1.5rem;
+  }
+  .card2__picture {
+    min-height: 26rem;
+  }
+}
+
+/*Menu-toggle - Icons*/
+.menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 10;
+}
+.menu span {
+  border-radius: 5px;
+  background: rgb(199, 198, 198);
+  display: block;
+  width: 60%;
+  margin: 5px auto;
+  height: 2px;
+}
+.menu .top-line {
+  animation-name: top-line-animation-close;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+.menu .middle-line {
+  animation-name: middle-line-animation-close;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+.menu .bottom-line {
+  animation-name: bottom-line-animation-close;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.menu.open .middle-line {
+  animation-name: middle-line-animation;
+}
+.menu.open .bottom-line {
+  animation-name: bottom-line-animation;
+}
+.menu.open .top-line {
+  animation-name: top-line-animation;
+}
+.menu.open span {
+  background: white;
+}
+
+@keyframes middle-line-animation {
+  0% {
+    /*position: absolute;*/
+  }
+  20%, 100% {
+    margin: 0 auto;
+    width: 0;
+    opacity: 0;
+  }
+}
+@keyframes bottom-line-animation {
+  50%, 100% {
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
+  }
+}
+@keyframes top-line-animation {
+  50%, 100% {
+    margin: 0 auto;
+    transform: translateY(2px) rotate(-45deg);
+  }
+}
+@keyframes middle-line-animation-close {
+  0% {
+    margin: 0 auto;
+    width: 0;
+    opacity: 0;
+  }
+  20%, 100% {
+    margin: 0px auto;
+    width: 60%;
+    opacity: 1;
+  }
+}
+@keyframes bottom-line-animation-close {
+  0% {
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
+  }
+  50%, 100% {
+    margin: 5px auto;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes top-line-animation-close {
+  0% {
+    margin: 0 auto;
+    transform: translateY(2px) rotate(-45deg);
+  }
+  50%, 100% {
+    margin: 5px auto;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+.icons-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.icons-nav .bx {
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .icons-nav {
+    margin-right: 0;
+  }
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 96%;
+  color: white;
+  height: 7.5rem;
+}
+.nav--content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+}
+.nav__container {
+  display: flex;
+  gap: 2rem;
+}
+.nav__list {
+  position: fixed;
+  inset: 0;
+  background: salmon;
+  padding: 0;
+  font-size: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0s 0.3s;
+}
+.nav__list.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-out, visibility 0s;
+}
+.nav__list a {
+  display: block;
+  padding: 1rem 4rem;
+  text-align: center;
+}
+.nav__user a {
+  padding: 2rem 6rem 2rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  min-height: 7.5rem;
+}
+.nav__user .bx {
+  font-size: 2.5rem;
+}
+.nav__logo {
+  margin: 0;
+}
+.nav__car {
+  font-size: 2.5rem;
+  background: rgb(132, 84, 252);
+  padding: 0.5rem 1rem;
+  border: 4px solid rgb(236, 233, 233);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .nav__list {
+    top: 0;
+    right: inherit;
+    bottom: 0;
+    left: 0;
+    width: 30vw;
+  }
+}
+
+/* HEADER */
+.header {
+  height: 100rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)), url("https://images.pexels.com/photos/15750741/pexels-photo-15750741/free-photo-of-alcohol-beber-bebida-vino.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.header__container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  height: auto;
+}
+.header__element {
+  text-align: center;
+  color: rgb(252, 252, 252);
+}
+.header__element p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 6px;
+}
+.header__element h4 {
+  line-height: 1;
+  font-weight: 400;
+}
+.header__element .button--secundary {
+  display: inline-block;
+  color: rgb(132, 84, 252);
+}
+.header__element .button--secundary:hover {
+  background: none;
+  border: 2px solid white;
+  color: rgb(252, 252, 252);
+}
+@media (min-width: 480px) {
+  .header__container {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    height: 80rem;
+  }
+  .header__container {
+    grid-template-columns: 1fr auto;
+    gap: 0;
+    width: 90%;
+  }
+  .header__element {
+    text-align: left;
+  }
+  .header__element h4 {
+    font-size: 13rem;
+  }
+}
+@media (min-width: 992px) {
+  .header__container {
+    width: 70%;
+  }
+}
+
+/* Section SPECIAL */
+.special {
+  padding: 4rem 0;
+}
+.special__container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 96%;
+}
+.special__subtitle {
+  letter-spacing: 8px;
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 1.5rem;
+}
+.special h4 {
+  line-height: 1.2;
+}
+.special h4, .special__subtitle {
+  color: rgb(132, 84, 252);
+}
+.special__prrfo {
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: "Quicksand", sans-serif;
+}
+.special .button--secundary {
+  display: inline-block;
+  border: 4px solid rgb(132, 84, 252);
+  color: rgb(132, 84, 252);
+}
+.special .button--secundary:hover {
+  background-color: rgb(132, 84, 252);
+  color: rgb(252, 252, 252);
+}
+.special .button--primary {
+  min-width: auto;
+  min-height: 3.8rem;
+}
+.special__grid {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .special__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .special h4 {
+    font-size: 10rem;
+  }
+}
+@media (min-width: 992px) {
+  .special__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4rem;
+  }
+}
+
+/*Section ACTION */
+.action {
+  color: rgb(252, 252, 252);
+  padding: 4rem 0;
+}
+.action__contain {
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.action__element {
+  background: rgb(132, 84, 252);
+  padding: 3rem;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+.action .button--primary {
+  border: 4px solid white;
+  display: inline-block;
+}
+.action .button--primary-none {
+  display: none;
+}
+@media (min-width: 768px) {
+  .action__contain {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .action .button--primary {
+    position: absolute;
+    bottom: -20px;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 40;
+    border: 6px solid white;
+  }
+}
+
+/*Section GALERY */
+.galery {
+  padding: 3rem 0;
+}
+.galery__title {
+  text-align: center;
+}
+.galery h3 {
+  margin-bottom: 5rem;
+  line-height: 1.2;
+  color: rgb(132, 84, 252);
+  font-size: 5rem;
+}
+.galery__picture {
+  min-height: 200px;
+  display: none;
+}
+.galery__picture--one {
+  background-image: url("https://images.pexels.com/photos/11739092/pexels-photo-11739092.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--two {
+  background-image: url("https://images.pexels.com/photos/4485353/pexels-photo-4485353.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--three {
+  background-image: url("https://images.pexels.com/photos/451832/pexels-photo-451832.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--four {
+  background-image: url("https://images.pexels.com/photos/434311/pexels-photo-434311.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--five {
+  background-image: url("https://images.pexels.com/photos/4485358/pexels-photo-4485358.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--six {
+  background-image: url("https://images.pexels.com/photos/17313073/pexels-photo-17313073/free-photo-of-alcohol-botellas-vino-inclinacion.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--seven {
+  background-image: url("https://images.pexels.com/photos/9397571/pexels-photo-9397571.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--eight {
+  background-image: url("https://images.pexels.com/photos/13246607/pexels-photo-13246607.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--nine {
+  background-image: url("https://images.pexels.com/photos/19891660/pexels-photo-19891660/free-photo-of-alcohol-botellas-pared-muro.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--ten {
+  background-image: url("https://images.pexels.com/photos/7670335/pexels-photo-7670335.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--eleven {
+  background-image: url("https://images.pexels.com/photos/11857203/pexels-photo-11857203.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery__picture--doce {
+  background-image: url("https://images.pexels.com/photos/20151736/pexels-photo-20151736/free-photo-of-puesta-de-sol-hombre-mano-alcohol.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.galery .picture-block {
+  display: block;
+  min-height: 350px;
+}
+@media (min-width: 768px) {
+  .galery h3 {
+    font-size: 10rem;
+  }
+  .galery__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .galery__picture {
+    min-height: 200px;
+    display: block;
+  }
+  .galery .picture-block {
+    min-height: inherit;
+  }
+  .galery__picture--four {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .galery__picture--six {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+/* Section FOOTER */
+.footer {
+  color: rgb(252, 252, 252);
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+.footer__element--one {
+  background: #8454FC;
+}
+.footer__element--two {
+  background: #794DE7;
+}
+.footer__element--three {
+  background: #6E46D2;
+  grid-row: 2/3;
+}
+.footer__element--four {
+  background: #6E46D2;
+}
+.footer__element {
+  text-align: center;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+}
+.footer__email {
+  margin-top: 1rem;
+}
+.footer input {
+  border: 2px solid white;
+  width: 100%;
+  padding: 0 1.5rem;
+  background: #8454FC;
+}
+.footer input::-moz-placeholder {
+  color: white; /* Cambia el color del texto del placeholder */
+}
+.footer input::placeholder {
+  color: white; /* Cambia el color del texto del placeholder */
+}
+.footer .button--secundary {
+  color: rgb(132, 84, 252);
+  width: 100%;
+  margin-top: 1rem;
+  font-family: "Oswald", sans-serif;
+}
+.footer .button--secundary:hover {
+  background-color: #6E46D2;
+  color: rgb(252, 252, 252);
+  border: 2px solid white;
+}
+.footer input, .footer .button--secundary {
+  min-height: 4rem;
+}
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.footer .bx {
+  font-size: 3.5rem;
+  border: 5px solid white;
+  padding: 1.5rem;
+}
+.footer a {
+  display: block;
+  margin-bottom: 2rem;
+}
+.footer__copy {
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+.footer__copy span {
+  text-decoration: underline;
+}
+.footer__copy--none {
+  display: none;
+}
+@media (min-width: 768px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .footer__element--two {
+    grid-row: 2/3;
+  }
+  .footer__element--three {
+    grid-row: inherit;
+    grid-column: 2/3;
+  }
+  .footer__copy {
+    display: none;
+  }
+  .footer__copy--none {
+    display: block;
+    margin-top: 4rem;
+  }
+  .footer__element {
+    text-align: left;
+    padding: 4rem 8rem;
+  }
+  .footer__icons {
+    justify-content: flex-start;
+  }
+  .footer .bx {
+    padding: 1rem;
+  }
+  .footer a {
+    display: inline-block;
+  }
+  .footer__email {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .footer input {
+    flex: 1.5;
+  }
+  .footer .button--secundary {
+    min-width: inherit;
+    margin: 0;
+    flex: 1;
+  }
+  .footer__flex {
+    display: flex;
+    gap: 2rem;
+  }
+  .footer__a {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer a {
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+@media (min-width: 992px) {
+  .footer .bx {
+    padding: 3rem;
+  }
+}/*# sourceMappingURL=main.css.map */
